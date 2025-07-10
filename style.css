@@ -29,20 +29,24 @@ body, html {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    background: #fffbe6; /* 先显示背景色 */
+    background: #fffbe6;
     z-index: 0;
-    transition: background-image 0.3s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .background.loaded {
-    background: url('images/哈利法塔02.png') no-repeat center center/cover;
+    background-image: url('images/bkt.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 700px) {
+    .background,
     .background.loaded {
-        background: url('images/哈利法塔02.png') no-repeat center center;
-        background-size: cover;
-        background-color: #fffbe6;
+        background-size: 100% 100% !important;
     }
 }
 
@@ -659,4 +663,11 @@ main {
 .custom-download-btn:hover {
     background: linear-gradient(180deg, #e94e3c 0%, #fa5a57 100%);
     color: #fff;
+}
+
+.card.app-download .card-header .underline-gold {
+    color: #111 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
 } 
